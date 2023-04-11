@@ -2,25 +2,23 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 body {
-    min-width: 960px;
-    height: 1200px;
     font-size: 18px;
+    width: 100%;
+
 }
 
 header,
 footer {
     background-color: #0F2243;
     color: white;
-    padding: 0 75px;
 }
 
 header {
     height: 30px;
-    padding: 15px 75px;
+    padding: 15px auto;
 }
 
 .container1 {
@@ -28,9 +26,7 @@ header {
     justify-content: space-between;
 }
 
-.logo,
-.navigation {
-    list-style: none;
+.logo {
     display: flex;
     justify-content: space-between;
 }
@@ -43,11 +39,18 @@ header {
 #letecode {
     margin: 0 5px;
 }
-
+.navigation{
+    display: flex;
+    justify-content: space-evenly;
+}
 .navigation a {
     color: white;
     text-decoration: none;
     margin: 0 5px;
+}
+
+.btn-nav {
+    visibility: hidden;
 }
 
 .container2 {
@@ -115,7 +118,7 @@ header {
 p,
 h1,
 h2 {
-    padding: 10px 0;
+    padding: 10px 50px;
 }
 
 .labelphoto {
@@ -136,27 +139,32 @@ h2 {
     border: 1px solid black;
 }
 
-.labelphoto2 {
-    padding: 0 100px;
+.cours-list {
+    margin: 50px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
 .cours {
+    padding: 10px;
     margin: 2px;
-    display: flex;
-    flex-direction: column;
+    display: block;
     height: 150px;
     width: 200px;
+}
+.cours .cours{
+    display: flex;
+    flex-direction: column;
 }
 
 #flexbox,
 #css,
 #html,
-#responsive,
 #git,
-#animation {
+#animation,
+#js
+{
     height: 100px;
     width: 200px;
 }
@@ -174,11 +182,11 @@ form {
 }
 
 .formulaire {
-    margin: 15px 100px;
+    margin: 15px 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 #contry {
@@ -226,4 +234,53 @@ footer {
     height: 120px;
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 840px){
+    *{
+        font-size: 14px;
+    }
+    header{
+        padding: 0 25px;
+    }
+    .navigation{
+        margin:auto 50px;
+        visibility: hidden;
+    }
+    .btn-nav{
+        visibility: visible;
+    }
+    .container3{
+        display: block;
+        padding: 0;
+        margin: 10px;
+    }
+    .container4{
+        padding: 0;
+        margin: 10px;
+    }
+    .logo2, 
+    .logo3,
+    .formulaire{
+        margin: 0;
+        padding: 0 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .submit{
+        margin-top: 10px;;
+    }
+    .logo2 img{
+        height: 40px;
+        margin: 0;
+   }
+   #python{
+        height: 100px;
+   }
+   .cours-list, 
+   .labelphoto,
+   form{
+        display: flex;
+        flex-direction: column;
+   }
 }

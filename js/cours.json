@@ -1,0 +1,32 @@
+[
+    {
+        "image": "media/1_mtsk3fQ_BRemFidhkel3dA.png",
+        "name": "Git & Github",
+        "id" : "git"
+    },
+    {
+        "image": "media/imagecss.png",
+        "name": "CSS 3",
+        "id" : "css"
+    },
+    {
+        "image": "media/imagehtml.png",
+        "name": "HTML 5",
+        "id" : "html"
+    },
+    {
+        "image": "media/js.png",
+        "name": "Responsive",
+        "id" : "js"
+    },
+    {
+        "image": "media/flexbox.png",
+        "name": "FlexBoX",
+        "id" : "flexbox"
+    },
+    {
+        "image": "media/animation.webp",
+        "name": "Animation",
+        "id" : "animation"
+    }
+]
