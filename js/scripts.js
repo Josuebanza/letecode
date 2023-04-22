@@ -2,16 +2,11 @@
 // JSOn
 // fetch();  
 
-
 const coursListeView = document.querySelector('.cours-list');
+const memberListeView = document.querySelector('.member-list');
 const navigateur = document.querySelector('.navigation');
-const btnNav = document.querySelector('.btn-nav');
-
-btnNav.addEventListener('click',() =>{
-    navigateur.style.visibility = "visible";
-})
-
-
+const btnOn = document.querySelector('.btn-on');
+const btnOff = document.querySelector('.btn-off');
 
 if (coursListeView) {
 
@@ -30,23 +25,41 @@ if (coursListeView) {
         });
 }
 
+if (memberListeView) {
+
+    fetch('js/communaute.json').then((reponse) => reponse.json())
+        .then((data) => {
+            console.log(data)
+            let members = data;
+            for (const membre of members) {
+                memberListeView.innerHTML +=
+                    `    <div class="membre">
+                             <div><img src="${membre.image}" alt="${membre.name}'s profil" id="${membre.id}" class="profil"></div>
+                             <iv><label for="${membre.id}">${membre.name}</label></div>
+                         </div> `
+            }
+        });
+}
+
+// Un bouton de navigateur
+
+btnOn.addEventListener('click', (e) => {
+    e.preventDefault()
+    btnOff.style.visibility = "visible"
+    navigateur.style.visibility = "visible"
+    btnOn.style.visibility = "hidden"
+})
+btnOff.addEventListener('click', (e) => {
+    e.preventDefault()
+    navigateur.style.visibility = "hidden"
+    btnOn.style.visibility = "visible"
+    btnOff.style.visibility = "hidden"  
+})
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
 /* fetch('js/cours.json').then(function(reponse){
     return reponse.json()
 })
