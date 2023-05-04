@@ -1,6 +1,3 @@
-// Api 
-// JSOn
-// fetch();  
 
 const coursListeView = document.querySelector('.cours-list');
 const memberListeView = document.querySelector('.member-list');
@@ -34,7 +31,7 @@ if (memberListeView) {
             for (const membre of members) {
                 memberListeView.innerHTML +=
                     `    <div class="membre">
-                             <div><img src="${membre.image}" alt="${membre.name}'s profil" id="${membre.id}" class="profil"></div>
+                             <div><img class="profil" src="${membre.image}" alt="${membre.name}'s profil" id="${membre.id}" ></div>
                              <iv><label for="${membre.id}">${membre.name}</label></div>
                          </div> `
             }
@@ -56,9 +53,6 @@ btnOff.addEventListener('click', (e) => {
     btnOff.style.visibility = "hidden"  
 })
 
-
-
-
 //
 /* fetch('js/cours.json').then(function(reponse){
     return reponse.json()
@@ -66,4 +60,3 @@ btnOff.addEventListener('click', (e) => {
 .then(function(data){
 
 }); */
-

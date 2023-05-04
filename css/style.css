@@ -1,286 +1,109 @@
-* {
-    margin: 0;
+*{
+    margin: 2px;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
 }
-
-body {
-    font-size: 18px;
-    width:fit-content;
-    height: 100vh;
+body{
+    width: 100%;
 }
-
-header,
-footer {
-    background-color: #0F2243;
-    color: white;
-}
-
-header {
-    height: 30px;
-    padding: 15px auto;
-}
-
-.container1 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo {
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo img {
-    height: 30px;
-    margin: 0 10px;
-}
-
-#letecode {
-    margin: 0 5px;
-}
-.navigation{
+.container_flex{
     display: flex;
     justify-content: space-evenly;
+    align-items:center;
+    flex-wrap: wrap;
 }
-.navigation a {
+.header, footer{
+    background-color: #0F2243;
+    color: white;
+    padding: 10px;
+}
+.navigation{
+    margin-left: 5px;
+}
+.navigation li{
+    list-style: none;
+    padding-right: 5px;
+}
+.navigation li a{
     color: white;
     text-decoration: none;
-    margin: 0 5px;
+}
+.navigation li a:hover{
+    color: darkviolet;
+    text-decoration: underline;
 }
 
-.btn-nav {
-    visibility: hidden;
+.btn-nav{
+    display: none;
 }
-
-.container2 {
+ .logo img{
+    height: 35px;
+ }
+.align-center{
     text-align: center;
-    margin: 15px;
-
+    margin: 10px;
 }
-
-.container2 div {
-    padding: 15px;
-}
-
-.button {
-    height: 30px;
-    width: 300px;
+.button{
+    height: 50px;
+    width: 180px;
     border-radius: 4px;
     border: #D72385 solid 1px;
     background-color: #D72385;
     text-decoration: none;
     color: white;
-    cursor: pointer;
     margin: 5px;
 }
-
-.button:hover {
-    background-color: rgb(173, 9, 39);
-    font-weight: bold;
+.textbox {
+    height: 30px;
+    width: 180px;
 }
-
-.container3 {
-    display: flex;
-    justify-content: space-evenly;
+.bg-gray{
     background-color: #EEEEEE;
     margin: 10px auto;
     padding-top: 10px;
     padding-left: 75px;
-
+}
+.box-sec, .box-one{
+    width: 45%;
 }
 
-.logo2 {
-    margin: 35px;
-    padding-left: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.logo2 img {
+.box-one img{
     height: 125px;
 }
 
-.logo3 {
-    margin: 15px 100px;
-    width: 100%;
-    display: flex;
+.container{
+    padding:5%;
 }
 
-#python {
-    height: 240px;
-    margin: 0 35px;
-}
-
-.container4 {
-    padding: 25px;
-    padding-left: 75px;
-}
-
-p,
-h1,
-h2 {
-    padding: 10px 50px;
-}
-
-.labelphoto {
-    padding-left: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.membre label {
-    display: block;
-}
-
-.profil {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 1px solid black;
-}
-
-.cours-list {
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.cours {
+p,h2,h3{
     padding: 10px;
-    margin: 2px;
+}
+.membre{
+    width: 22%;
+}
+.membre img{
+    width: 90%;
+}
+
+.cours{
+    width: 30%;
+}
+.cours img{
+    width: 75%;
+}
+.formulaire , form input{
     display: block;
-    height: 150px;
-    width: 200px;
 }
-.cours .cours{
-    display: flex;
-    flex-direction: column;
-}
-
-#flexbox,
-#css,
-#html,
-#git,
-#animation,
-#js
-{
-    height: 100px;
-    width: 200px;
-}
-
-form {
-    margin: 15px;
-    display: grid;
-    grid-template-columns: 325px 300px;
-    grid-template-rows: 60px 60px 135px 30px;
-    grid-template-areas:
-        "i1 i2"
-        "i3 i4"
-        "ta vi"
-        "sb vi";
-}
-
-.formulaire {
-    margin: 15px 30px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-#contry {
-    cursor: default;
-}
-
-.submit {
-   
-    grid-area: sb;
-}
-
-.submit:hover {
-    background-color: rgb(173, 9, 39);
-    font-weight: bold;
-}
-
-.entry label {
+.entry, label{
     display: block;
 }
 
-textarea {
-    grid-area: ta;
-    resize: none;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
 }
 
-.textbox,
-.mail {
-    height: 30px;
-    width: 300px;
-    border-radius: 4px;
-    border: black solid 1px;
-    background-color: #D8D8D8;
-    cursor: text;
-}
-
-footer {
-    height: 120px;
-    display: flex;
-    align-items: center;
-}
-.btn-off{
-    visibility: hidden;
-}
-
-@media screen and (max-width: 840px){
-    *{
-        font-size: 14px;
+@media screen and (max-width: 767px) {
+    .bg-gray{
+        display: block;
     }
-    header{
-        padding: 0 25px;
-    }
-    .navigation{
-        margin:auto 50px;
-        visibility: hidden;
-    }
-    .btn-on{
-        visibility: visible;
-    }
-    .container3{
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 10px;
-    }
-    .container4{
-        padding: 0;
-        margin: 10px;
-    }
-    .logo2, 
-    .logo3,
-    .formulaire{
-        margin: 0;
-        padding: 0 50px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .submit{
-        margin-top: 10px;;
-    }
-    .logo2 img{
-        height: 40px;
-        margin: 0;
-   }
-   #python{
-        height: 100px;
-   }
-   .cours-list, 
-   .labelphoto,
-   form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-   }
+    
 }

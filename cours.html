@@ -10,40 +10,40 @@
 </head>
 
 <body>
-    <header>
-        <div class="container1">
-            <div class="logo">
-                <img src="media/logoletecode.png" alt="le logo">
-                <span class="nom">Letecode</span>
-            </div>
-            <div class="navigation">
-                <div><button class="btn-nav btn-on ">:::</button></div>
-                <div><button class="btn-nav btn-off">|||</button></div>
-                <div><a href="index.html">Accueil</a></div>
-                <div><a href="communaute.html">Communauté</a></div>
-                <div><a href="cours.html">Cours</a></div>
-                <div><a href="contact.html">Contacts</a> </div>
-            </div>
-        </div>
-    </header>
+    <header class="container_flex header">
+        <figure class="logo container_flex">
+            <img src="media/logoletecode.png" alt="le logo">
+            <figcaption class="nom">letecode</figcaption>
+        </figure>
+        <nav class="container_flex">
+            <div><button class="btn-nav btn-on ">:::</button></div>
+            <div><button class="btn-nav btn-off">|||</button></div>
+            <ul class="navigation container_flex">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="communaute.html">Communauté</a></li>
+                <li><a href="cours.html">Cours</a></li>
+            </ul>
+        </nav>
+</header>
     <main>
         <h1>Les cours</h1>
 
-        <div class="cours-list">
+        <section class="cours-list container_flex">
             
-        </div>
-        <div class="container3">
-            <div class="text">
+        </section>
+        <section class="container_flex bg-gray">
+            <article class="text box-sec">
                 <h2>Abonnez-vous à la boîte aux lettres</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem esse vel inventore eveniet dicta
                     repellendus quam deleniti tenetur magnam, unde neque fuga voluptates sapiente doloribus delectus eos
                     nulla corrupti rem. animi vero!</p>
-            </div>
-            <div class="formulaire">
+                </article>
+            <form class="formulaire box-one">
                 <input type="email" placeholder="Envoyer un e-mail" class="textbox">
-                <input type="button" value="S'abonner" class="submit button">
-            </div>
-        </div>
+                <input type="submit" value="s'Abonnez-vous" class="submit button">
+            </form>
+        </section>
 
     </main>
     <footer>
